@@ -134,11 +134,7 @@ SOCIALACCOUNT_AVATAR_SUPPORT = 'avatar'
 
 LOGIN_REDIRECT_URL = '/logged-in'
 
-#APPEND_SLASH = False
 TASTYPIE_ALLOW_MISSING_SLASH = True
-
-#SOMEURL = '/logged-in?%s&%s' % (request.user, ApiKey.objects.get(user=request.user))
-
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
