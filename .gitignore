@@ -1,0 +1,12 @@
+*.log
+*.pot
+*.pyc
+local_settings.py
+local_config.json
+iOS_Team_Provisioning_Profile_.mobileprovision
+trigger/development/
+trigger/.template/
+*.ipa
+trigger/.lib/
+db
+media/

@@ -1,0 +1,13 @@
+<a ng-click="refresh()" class='btn btn-inverse refresh'>
+    <i class="icon-refresh icon-white"></i>
+</a>
+<p>Get voting!</p>
+<ul id="food-options">
+    <li ng-repeat="food_option in food_options.objects">
+        <span class="badge">{{food_option.votes}}</span> 
+        {{food_option.name}}</span>
+        <a ng-click="attemptVote($index)" ng-model="current_vote" class='btn ng-class: {"btn-success":  current_vote.objects[0].food_option.name == food_option.name }'>
+            <i class="icon-ok"></i>
+        </a>
+    </li>
+</ul>
