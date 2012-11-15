@@ -21,6 +21,7 @@ $ sudo easy_install pip
 $ pip install virtualenvwrapper
 ```
 
+Setup your environment and Django app:
 ```bash
 $ mkvirtualenv authAppEnv
 (authAppEnv)$ pip install -r requirements.txt
