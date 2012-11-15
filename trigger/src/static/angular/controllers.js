@@ -55,7 +55,7 @@ function SiginInCtrl($scope, $location, apiCall) {
     var theURL;
 
     if (typeof forge === "undefined") {
-      theURL = 'http://192.168.91.96/auth/?username=artitudinale&api_key=0ee2e04b1e4e5ec3e60d436194d3b37b9a3c0f14&user=6';
+      theURL = 'http://192.168.91.96/auth/?username=rob_balfre&api_key=c319b05011d30d45b57b5f1ab31b15dbeba47a73&user=2';
       setLocalStorage(theURL);
       $location.path('/list');
     } else {
@@ -64,10 +64,9 @@ function SiginInCtrl($scope, $location, apiCall) {
         pattern: 'http://192.168.91.96/auth/*'
       }, function(data) {
         forge.logging.log(data.url);
-        
-         $scope.$apply(function() {
-           setLocalStorage(data.url);
-           $location.path('/list');
+        $scope.$apply(function() {
+          setLocalStorage(data.url);
+          $location.path('/list');
         });
       });
     };
