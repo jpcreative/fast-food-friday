@@ -25,7 +25,7 @@ $ mkvirtualenv authAppEnv
 (authAppEnv)$ cd authApp
 (authAppEnv)$ python manage.py syncdb
 (authAppEnv)$ sudo python manage.py runserver YOUR-IP-HERE:80
-```bash
+```
 
 The reason for using sudo and your IP with runserver will become clear when getting angular running locally.
 
