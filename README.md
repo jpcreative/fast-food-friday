@@ -32,9 +32,12 @@ $ mkvirtualenv authAppEnv
 
 The reason for using sudo and your IP with runserver will become clear when getting angular running locally.
 
-In your browser go to: http://YOUR-IP-HERE/admin/socialaccount/socialapp/add/ and create a social app.
+
 Visit [https://dev.twitter.com/apps](https://dev.twitter.com/apps) to create a twitter app and get a consumer and secret key. Set the Callback URL to http://YOUR-IP-HERE/logged-in.
-Sign out of Django admin, visit http://YOUR-IP-HERE/accounts/login/ and sign in with Twitter. Hopefully that will prompt Twitter to authorize your account and redirect you to the login screen 'YAY'.  Please take a note of the URL query string as we'll need that for testing Angular.
+In your browser go to: http://YOUR-IP-HERE/admin/socialaccount/socialapp/add/ and create a social app.
+Sign out of Django admin, visit http://YOUR-IP-HERE/accounts/login/ and sign in with Twitter.
+Hopefully that will prompt Twitter to authorize your account and redirect you to the login screen 'YAY'.
+Please take a note of the URL query string as we'll need that for testing Angular.
 
 ### Angular.js
 
