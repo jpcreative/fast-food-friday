@@ -53,27 +53,12 @@ We also need to update SiginInCtrl() with your IP, username, api_key and user id
 
 controllers.js:
 
-    function SiginInCtrl($scope, $location, apiCall) {
-      $scope.twitterSignIn = function() {
-        var theURL;
-        if (typeof forge === "undefined") {
-          theURL = 'http://YOUR-IP-HERE/auth/?username=YOUR-TWITTER-USERNAME&api_key=YOUR-API-KEY&user=2';
-          setLocalStorage(theURL);
-          $location.path('/list');
-        } else {
-          forge.tabs.openWithOptions({
-            url: 'http://YOUR-IP-HERE/accounts/twitter/login/',
-            pattern: 'http://YOUR-IP-HERE/auth/*'
-          }, function(data) {
-            forge.logging.log(data.url);
-            $scope.$apply(function() {
-              setLocalStorage(data.url);
-              $location.path('/list');
-            });
-          });
-        };
-      };
-    };
+    ...
+    theURL = 'http://YOUR-IP-HERE/auth/?username=YOUR-TWITTER-USERNAME&api_key=YOUR-API-KEY&user=2';
+    ...
+    url: 'http://YOUR-IP-HERE/accounts/twitter/login/',
+    pattern: 'http://YOUR-IP-HERE/auth/*'
+    ...
 
 To get the app running locally:
 
