@@ -1,8 +1,8 @@
 # fast-food-friday
 
-R&amp;D project combining AngularJS, Django Tastypie and Trigger.io 
+A R&amp;D project combining AngularJS, Django Tastypie and Trigger.io 
 
-Every Friday at [JPCreative](http://jpcreative.co.uk) we have a tradition of eating lunch together, sometimes forming a consensus on what to have proves difficult.  Until now!  Introducing the Fast Fast Friday app.
+Every Friday at [JPCreative](http://jpcreative.co.uk) we have a tradition of eating lunch together, sometimes forming a consensus on what to have proves difficult.  Until now... Introducing the Fast Fast Friday app.
 
 It's a simple proof on concept app for iOS and Android that allows users to sign in via twitter, suggest and vote for their preferred lunch menu. It's coded completely in Python, HTML, CSS and JavaScript.  No native code is used at all.
 
@@ -49,7 +49,7 @@ Open trigger/src/static/angular/services.js in your IDE of choice, and edit the 
 
 Add your IP but don't add :80 or Angular will think it's another parameter and ignore the colon. 
 
-We also need to update SiginInCtrl() with your IP, username, api_key and user id (we saved from the query string in last step of installing Django) 
+We also need to update SiginInCtrl() with your IP, username, api_key and user id (saved from the query string in last step of installing Django) 
 
 controllers.js:
 
@@ -72,4 +72,4 @@ Visit [http://0.0.0.0:8000](http://0.0.0.0:8000/) in a web browser or iOS/Androi
 
 ### Trigger.io
 
-TODO
+Visit [trigger.io](https://trigger.io/) and follow the steps to get up and running. Create a new app and copy over the contents of trigger/src to the new trigger app src folder.
