@@ -16,8 +16,10 @@ To package Android apps will you need... TODO
 ### Django
 
 You'll need pip and virtualenvwrapper:
-sudo easy_install pip
-pip install virtualenvwrapper
+```bash
+$ sudo easy_install pip
+$ pip install virtualenvwrapper
+```
 
 ```bash
 $ mkvirtualenv authAppEnv
