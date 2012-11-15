@@ -69,7 +69,8 @@ $ python -m SimpleHTTPServer
 
 Visit [http://0.0.0.0:8000](http://0.0.0.0:8000/) in a web browser or iOS/Android simulator.  
 
-
 ### Trigger.io
 
-Visit [trigger.io](https://trigger.io/) and follow the steps to get up and running. Create a new app and copy over the contents of trigger/src to the new trigger app src folder.
+Visit [trigger.io](https://trigger.io/) and follow the steps to get up and running. Create a new app and copy over the contents of trigger/src to the new trigger app src folder.  Edit the app config to include 'tabs'.
+
+Run the app.

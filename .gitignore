@@ -10,3 +10,6 @@ trigger/.template/
 trigger/.lib/
 db
 media/
+trigger/local_config.json
+trigger/src/config.json
+trigger/src/indetity.json

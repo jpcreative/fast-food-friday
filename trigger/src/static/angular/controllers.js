@@ -30,14 +30,14 @@ app.controller('MainAppCtrl', function($scope, $rootScope, $location, apiCall) {
 app.controller('tabCtrl', function($scope, $location) {
     $scope.isActive = function(route) {
         return route === $location.path();
-    }
+    };
 });
 
 
 
 function HomeCrtl($scope, $location) {
   
-  //check for connecton 
+  //check for connecton
   var online = navigator.onLine;
 
   //if connected attempt to login
@@ -48,20 +48,20 @@ function HomeCrtl($scope, $location) {
   } else {
     $location.path('/no-connection');
   }
-};
+}
 
 function SiginInCtrl($scope, $location, apiCall) {
   $scope.twitterSignIn = function() {
     var theURL;
 
     if (typeof forge === "undefined") {
-      theURL = 'http://192.168.91.96/auth/?username=rob_balfre&api_key=c319b05011d30d45b57b5f1ab31b15dbeba47a73&user=2';
+      theURL = 'http://192.168.91.20/auth/?username=rob_balfre&api_key=c319b05011d30d45b57b5f1ab31b15dbeba47a73&user=2';
       setLocalStorage(theURL);
       $location.path('/list');
     } else {
       forge.tabs.openWithOptions({
-        url: 'http://192.168.91.96/accounts/twitter/login/',
-        pattern: 'http://192.168.91.96/auth/*'
+        url: 'http://192.168.91.20/accounts/twitter/login/',
+        pattern: 'http://192.168.91.20/auth/*'
       }, function(data) {
         forge.logging.log(data.url);
         $scope.$apply(function() {
@@ -69,15 +69,15 @@ function SiginInCtrl($scope, $location, apiCall) {
           $location.path('/list');
         });
       });
-    };
+    }
   };
-};
+}
 
 function setLocalStorage(data) {
     localStorage.setItem("userID", getURLParameter('user', data));
     localStorage.setItem("username", getURLParameter('username', data));
-    localStorage.setItem("apiKey", getURLParameter('api_key', data));  
-};
+    localStorage.setItem("apiKey", getURLParameter('api_key', data));
+}
 
 
 function ListCtrl($rootScope, $scope, $location, apiCall) {
@@ -108,7 +108,7 @@ function ListCtrl($rootScope, $scope, $location, apiCall) {
 
   $scope.addNew = function() {
     $location.path('/new');
-  }
+  };
 
   $scope.attemptVote = function() {
     function sendVote(vote) {
@@ -147,14 +147,14 @@ function ListCtrl($rootScope, $scope, $location, apiCall) {
       }
     } else {
       sendVote(this.food_option.id);
-    }; 
+    }
   };
   
   $scope.refresh = function() {
     $scope.food_options = getFoodOptions();
     $scope.current_vote = getCurrentVote();
   };
-};
+}
 
 function CreateCtrl($scope, $location, apiCall) {
   $scope.food_options = apiCall.get({
@@ -175,5 +175,5 @@ function CreateCtrl($scope, $location, apiCall) {
     }, function() {
       $location.path('/list');
     });
-  }
+  };
 }
