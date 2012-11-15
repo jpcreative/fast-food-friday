@@ -10,11 +10,23 @@ The back end creates a API using [Django](https://www.djangoproject.com) and [Ta
 
 ## Installation
 
-TODO
+To package iOS apps with trigger.io you'll need OSX with Xcode. I'd also suggest you install Xcode command line tools.
 
 ### Django
 
-TODO
+You'll need pip and virtualenvwrapper:
+sudo easy_install pip
+pip install virtualenvwrapper
+
+```bash
+$ mkvirtualenv authAppEnv
+(authAppEnv)$ pip install -r requirements.txt
+(authAppEnv)$ cd authApp
+(authAppEnv)$ python manage.py syncdb
+(authAppEnv)$ sudo python manage.py runserver YOUR-IP-HERE:80
+```
+That should get a local version of the API running.
+The reason for using sudo and your IP with runserver will become clear when getting angular running locally.
 
 ### Angular.js
 
@@ -23,10 +35,3 @@ TODO
 ### Trigger.io
 
 TODO
-
-
-
-
-
-
-
