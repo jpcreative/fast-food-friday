@@ -1,6 +1,6 @@
 # fast-food-friday
 
-A R&amp;D project combining AngularJS, Django Tastypie and Trigger.io 
+R&amp;D project combining AngularJS, Django Tastypie and Trigger.io 
 
 Every Friday at [JPCreative](http://jpcreative.co.uk) we have a tradition of eating lunch together, sometimes forming a consensus on what to have proves difficult.  Until now... Introducing the Fast Fast Friday app.
 
@@ -11,7 +11,7 @@ The back end creates a API using [Django](https://www.djangoproject.com) and [Ta
 ## Installation
 
 To package iOS apps with trigger.io you'll need OSX with Xcode. I'd also suggest you install Xcode command line tools.
-To package Android apps will you need... TODO
+To package Android apps will you need to install Java and the android SDK.
 
 ### Django
 
